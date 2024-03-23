@@ -245,7 +245,7 @@ public class login extends javax.swing.JFrame {
                 
             }
             else{
-                JOptionPane.showMessageDialog(this, "Companyname and Password Does not Match");
+                JOptionPane.showMessageDialog(this, "Invalid company name or password");
             }
             
         }catch(Exception ex){
