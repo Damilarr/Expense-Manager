@@ -155,7 +155,7 @@ public class Report extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Entry ID", "Date", "Description", "Category", "Debit", "Credit"
+                "ID", "Date", "Description", "Category", "Debit", "Credit"
             }
         ));
         jScrollPane1.setViewportView(tabler);

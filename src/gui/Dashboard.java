@@ -320,15 +320,15 @@ public class Dashboard extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Entry Id", "Date", "Description", "Category", "Debit", "Credit"
+                "Entry Id", "S/N", "Date", "Description", "Category", "Debit", "Credit"
             }
         ));
         jScrollPane1.setViewportView(table);
         if (table.getColumnModel().getColumnCount() > 0) {
             table.getColumnModel().getColumn(0).setMaxWidth(90);
-            table.getColumnModel().getColumn(1).setMaxWidth(110);
-            table.getColumnModel().getColumn(4).setMaxWidth(150);
+            table.getColumnModel().getColumn(2).setMaxWidth(110);
             table.getColumnModel().getColumn(5).setMaxWidth(150);
+            table.getColumnModel().getColumn(6).setMaxWidth(150);
         }
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
