@@ -56,21 +56,26 @@ public class forgot extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(51, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("Company name");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setText("email:");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("New Password:");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("Confirm Password:");
 
-        jButton1.setBackground(new java.awt.Color(204, 255, 255));
+        jButton1.setBackground(new java.awt.Color(51, 204, 255));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Change Password");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +83,7 @@ public class forgot extends javax.swing.JFrame {
             }
         });
 
-        companyname1.setBackground(new java.awt.Color(204, 255, 255));
+        companyname1.setBackground(new java.awt.Color(51, 204, 255));
         companyname1.setBorder(null);
         companyname1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,19 +91,26 @@ public class forgot extends javax.swing.JFrame {
             }
         });
 
-        emaila.setBackground(new java.awt.Color(204, 255, 255));
+        emaila.setBackground(new java.awt.Color(51, 204, 255));
         emaila.setBorder(null);
 
-        newpassw.setBackground(new java.awt.Color(204, 255, 255));
+        newpassw.setBackground(new java.awt.Color(51, 204, 255));
         newpassw.setBorder(null);
+        newpassw.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newpasswActionPerformed(evt);
+            }
+        });
 
-        cnewpass.setBackground(new java.awt.Color(204, 255, 255));
+        cnewpass.setBackground(new java.awt.Color(51, 204, 255));
         cnewpass.setBorder(null);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Forgot your Password?");
 
-        jLabel6.setText("To reset your password,type the companyname and email.");
+        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel6.setText("To reset your password,type the company name and email.");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -204,20 +216,24 @@ public class forgot extends javax.swing.JFrame {
                 
                 int n  = database.dbclass.st.executeUpdate("Update user set password = '"+newpass+"'  where companyname = '"+companyname+"' and email = '"+email+"' ");
                 if (n == 0){
-                JOptionPane.showMessageDialog(null, "Username and Email does not match");
+                JOptionPane.showMessageDialog(null, "Company name and Email does not match");
                 }
                 else{
                    JOptionPane.showMessageDialog(null, "Password changed successfully"); 
                 }
             }
         }catch(Exception ex){
-            JOptionPane.showMessageDialog(null, "Username and Email does not match");
+            JOptionPane.showMessageDialog(null, "Company name and Email does not match");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
         new login().setVisible(true);
     }//GEN-LAST:event_formWindowClosed
+
+    private void newpasswActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newpasswActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_newpasswActionPerformed
 
     /**
      * @param args the command line arguments

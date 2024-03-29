@@ -15,10 +15,10 @@ import javax.swing.*;
 public class operations {
     public static boolean isLogin(String companyname,String password,JFrame frame){
         try{
-             ResultSet rs = database.dbclass.st.executeQuery("Select user_id,Name from user where companyname = '"+companyname+"' and password = '"+password+"' ");
+             ResultSet rs = database.dbclass.st.executeQuery("Select user_id,companyname from user where companyname = '"+companyname+"' and password = '"+password+"' ");
             while(rs.next()){
                 loginsession.UID = rs.getInt("user_id");
-                loginsession.Name_user = rs.getString("Name");
+                loginsession.Name_user = rs.getString("companyname");
                 return true;
             }
         }catch(Exception ex){

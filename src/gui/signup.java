@@ -34,14 +34,11 @@ public class signup extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        nameus = new javax.swing.JTextField();
         companyname1 = new javax.swing.JTextField();
         emaila = new javax.swing.JTextField();
-        jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
@@ -67,10 +64,6 @@ public class signup extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 204, 255));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setText("Name:");
-
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setText("company name");
@@ -83,14 +76,6 @@ public class signup extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("Email:");
 
-        nameus.setBackground(new java.awt.Color(51, 204, 255));
-        nameus.setBorder(null);
-        nameus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameusActionPerformed(evt);
-            }
-        });
-
         companyname1.setBackground(new java.awt.Color(51, 204, 255));
         companyname1.setBorder(null);
 
@@ -101,8 +86,6 @@ public class signup extends javax.swing.JFrame {
                 emailaActionPerformed(evt);
             }
         });
-
-        jSeparator1.setForeground(new java.awt.Color(51, 51, 51));
 
         jSeparator2.setForeground(new java.awt.Color(51, 51, 51));
 
@@ -151,7 +134,6 @@ public class signup extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(40, 40, 40)
@@ -163,11 +145,9 @@ public class signup extends javax.swing.JFrame {
                                 .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(cpassw, javax.swing.GroupLayout.Alignment.LEADING))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(nameus, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(passw, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
                                 .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(companyname1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING))))
+                                .addComponent(companyname1, javax.swing.GroupLayout.Alignment.LEADING))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(61, 61, 61)
                         .addComponent(jLabel6)))
@@ -178,14 +158,7 @@ public class signup extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6)
-                .addGap(13, 13, 13)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(nameus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -232,47 +205,6 @@ public class signup extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void emailaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailaActionPerformed
-
-    private void nameusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameusActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        try{
-            String name,companyname,password,email,confirmpassword;
-            name = nameus.getText();
-            companyname = companyname1.getText();
-            password = String.valueOf(passw.getPassword());
-            confirmpassword = String.valueOf(cpassw.getPassword());
-            email = emaila.getText();
-            
-            
-        if(!password.equals(confirmpassword)){   
-            JOptionPane.showMessageDialog(null, "Password does not match!");
-        }
-        else{    
-            if(!name.equals("") && !companyname.equals("") && !password.equals("") && !email.equals(""))
-            {
-                check = true;
-                database.dbclass.st.executeUpdate("Insert into user(companyname,password,email,Name) values('"+companyname+"','"+password+"','"+email+"','"+name+"') ");
-                JOptionPane.showMessageDialog(null, "User created");
-                this.dispose();
-                new login().setVisible(true);
-            }else
-            {
-                System.out.println("error");
-            }
-            
-        }
-        }catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage());
-                }
-    
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
         
         if (check == false){
@@ -280,6 +212,41 @@ public class signup extends javax.swing.JFrame {
         new login().setVisible(true);
         }
     }//GEN-LAST:event_formWindowClosed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try{
+            String name,companyname,password,email,confirmpassword;
+            companyname = companyname1.getText();
+            password = String.valueOf(passw.getPassword());
+            confirmpassword = String.valueOf(cpassw.getPassword());
+            email = emaila.getText();
+
+            if(!password.equals(confirmpassword)){
+                JOptionPane.showMessageDialog(null, "Password does not match!");
+            }
+            else{
+                if(!companyname.equals("") && !password.equals("") && !email.equals(""))
+                {
+                    check = true;
+                    database.dbclass.st.executeUpdate("Insert into user(companyname,password,email) values('"+companyname+"','"+password+"','"+email+"') ");
+                    JOptionPane.showMessageDialog(null, "User created");
+                    this.dispose();
+                    new login().setVisible(true);
+                }else
+                {
+                    System.out.println("error");
+                }
+
+            }
+        }catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage());
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void emailaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -323,7 +290,6 @@ public class signup extends javax.swing.JFrame {
     private javax.swing.JTextField emaila;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -331,12 +297,10 @@ public class signup extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JTextField nameus;
     private javax.swing.JPasswordField passw;
     // End of variables declaration//GEN-END:variables
 }
